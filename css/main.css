@@ -31,6 +31,17 @@ svg {
   cursor: pointer;
 }
 
+.btn-click path {
+  fill: #f60;
+  transition: all 200ms linear;
+}
+
 .lines path {
   stroke-dasharray: 0, 480;
+}
+
+.engage-click {
+  fill: #f60;
+  transition-delay: 1.2s;
+  transition: all 200ms linear;
 }
