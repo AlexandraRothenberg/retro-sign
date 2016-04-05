@@ -32,40 +32,65 @@ svg {
 }
 
 .btn:active {
-  fill: #f60;
+  transform: scale(1, 1);
 }
 
-.btn-click path {
+.btn-click path:nth-child(2) {
   fill: #f60;
-  animation: fade 200ms linear;
-}
-
-@keyframes fade {
-
-  0% {
-    fill: #630;
-  }
-
-  100% {
-    fill: #f60;
-  }
 }
 
 .lines path {
-  stroke-dasharray: 0, 480;
+  stroke-dasharray: 0, 480; 
 }
 
-.lines-on {
+.lines-on path{
+  animation: line 1.3s linear forwards;
+}
+
+@keyframes line {
+
+  0% {
+    stroke-dasharray: 0, 480;
+  }
+
+  100% {
+    stroke-dasharray: 500, 480;
+  }
+}
+
+.engage-click path:nth-child(6) {
   fill: #f60;
-  transition: 1s linear forwards;
-  transition-delay: 200ms;
+  transition: all .2s;
+  transition-delay: 1.3s;
 }
 
-.engage-click {
-  transition: all 200ms linear;
+.engage-click path:nth-child(1) {
   fill: #f60;
+  transition: all .2s;
+  transition-delay: 1.3s;
 }
 
-.engage-click:nth-child(6) {
-  transition-delay: 100ms;
+.engage-click path:nth-child(2) {
+  fill: #f60;
+  transition: all .2s;
+  transition-delay: 1.4s;
 }
+
+.engage-click path:nth-child(5) {
+  fill: #f60;
+  transition: all .2s;
+  transition-delay: 1.4s;
+}
+
+.engage-click path:nth-child(3) {
+  fill: #f60;
+  transition: all .2s;
+  transition-delay: 1.5s;
+}
+
+.engage-click path:nth-child(4) {
+  fill: #f60;
+  transition: all .2s;
+  transition-delay: 1.5s;
+}
+
