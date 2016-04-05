@@ -31,6 +31,10 @@ svg {
   cursor: pointer;
 }
 
+.btn:active {
+  fill: #f60;
+}
+
 .btn-click path {
   fill: #f60;
   transition: all 200ms linear;
@@ -42,6 +46,6 @@ svg {
 
 .engage-click {
   fill: #f60;
-  transition-delay: 1.2s;
   transition: all 200ms linear;
+  transition-delay: 1.2s;
 }
