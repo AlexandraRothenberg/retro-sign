@@ -37,15 +37,35 @@ svg {
 
 .btn-click path {
   fill: #f60;
-  transition: all 200ms linear;
+  animation: fade 200ms linear;
+}
+
+@keyframes fade {
+
+  0% {
+    fill: #630;
+  }
+
+  100% {
+    fill: #f60;
+  }
 }
 
 .lines path {
   stroke-dasharray: 0, 480;
 }
 
-.engage-click {
+.lines-on {
   fill: #f60;
+  transition: 1s linear forwards;
+  transition-delay: 200ms;
+}
+
+.engage-click {
   transition: all 200ms linear;
-  transition-delay: 1.2s;
+  fill: #f60;
+}
+
+.engage-click:nth-child(6) {
+  transition-delay: 100ms;
 }
