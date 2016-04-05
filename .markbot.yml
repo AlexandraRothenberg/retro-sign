@@ -69,32 +69,27 @@ functionality:
         let oldStrokeDasharray = css(path).strokeDasharray;
         let letterE = $('.engage path:first-child');
         let oldLetterEFill = css(letterE).fill;
-
         var checkPass = function () {
           if (totalEvents <= 0) pass();
         };
-
         on('.btn path:nth-child(2)', 'transitionend', function (err, ev) {
           if (err) fail('The transition on the button’s coloured setion never ends—check that is has a transition');
           if (oldBtnFill == css(btnFill).fill) fail('The button doesn’t change colour');
           totalEvents--;
           checkPass();
         });
-
         on('.lines path', 'animationend', function (err, ev) {
           if (err) fail('The animation on the lines never ends—check that they have an animation');
           if (oldStrokeDasharray == css(path).strokeDasharray) fail('The `stroke-dasharray` doesn’t change in the animation');
           totalEvents--;
           checkPass();
         });
-
         on('.engage path:first-child', 'transitionend', function (err, ev) {
           if (err) fail('The transition never ends on the letters—check that they have a transision');
           if (oldLetterEFill == css(letterE).fill) fail('The letters don’t change colour');
           totalEvents--;
           checkPass();
         });
-
         btn.dispatchEvent(ev('click'));
         if (svg.classList.length <= oldClassLength) fail('The class does’t change on the SVG');
         if (oldAnimName == css(path).animationName) fail('An animation isn’t added to the lines');

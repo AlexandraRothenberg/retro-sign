@@ -40,10 +40,10 @@ svg {
 }
 
 .lines path {
-  stroke-dasharray: 0, 480; 
+  stroke-dasharray: 0, 480;
 }
 
-.lines-on path{
+.lines-on path {
   animation: line 1.3s linear forwards;
 }
 
